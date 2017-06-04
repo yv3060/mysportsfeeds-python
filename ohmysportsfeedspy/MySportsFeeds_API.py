@@ -18,7 +18,7 @@ from ohmysportsfeedspy.v1_0 import API_v1_0
 class MySportsFeeds(object):
 
     # Constructor
-    def __init__(self, version='1.0', verbose=False, store_type=None, store_location=None):
+    def __init__(self, version='1.0', verbose=False, store_type='file', store_location='results/'):
         self.__verify_version(version)
         self.__verify_store(store_type, store_location)
 
@@ -39,7 +39,7 @@ class MySportsFeeds(object):
     # Verify the type and location of the stored data
     def __verify_store(self, store_type, store_location):
         if store_type != None and store_type != 'file':
-            raise ValueError("Unrecognized storage type specified.  Supported values are: 'file'")
+            raise ValueError("Unrecognized storage type specified.  Supported values are: None,'file'")
 
         if store_type == 'file':
             if store_location == None:
