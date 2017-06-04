@@ -16,6 +16,8 @@ Install requirements and run tests
 
 Create main MySportsFeeds object with API version as input parameter
 
+    from ohmysportsfeedspy import MySportsFeeds
+
     msf = MySportsFeeds(version="1.0")
 
 Authenticate (v1.0 uses your MySportsFeeds account credentials)
