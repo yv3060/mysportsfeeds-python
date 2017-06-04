@@ -22,9 +22,6 @@ Authenticate (v1.0 uses your MySportsFeeds account credentials)
 
     msf.authenticate("YOUR_USERNAME", "YOUR_PASSWORD")
 
-If you haven't signed up for API access, do so here [https://www.mysportsfeeds.com/index.php/register/](https://www.mysportsfeeds.com/index.php/register/)
-
-
 Start making requests, specifying: league, season, feed, format, and any other applicable params for the feed
 
     output = msf.msf_get_data(league='nba',season='2016-2017-regular',feed='player_gamelogs',format='json',player='stephen-curry')
