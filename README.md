@@ -2,15 +2,18 @@
 
 ##Instructions
 
-Clone repo
+Clone repo, install requirements and run tests
     
     $ git clone https://github.com/MySportsFeeds/mysportsfeeds-python.git
+    $ make build
+
+OR
+
+Use PIP install
+    
+    $ pip install ohmysportsfeedspy
 
 If you haven't signed up for API access, do so here [https://www.mysportsfeeds.com/index.php/register/](https://www.mysportsfeeds.com/index.php/register/)
-
-Install requirements and run tests
-
-    $ make build
 
 ##Usage
 
