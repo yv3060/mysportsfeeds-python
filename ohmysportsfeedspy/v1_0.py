@@ -156,7 +156,7 @@ class API_v1_0(object):
                 params[key] = value
 
         # add force=false parameter (helps prevent unnecessary bandwidth use)
-        if not "force" in params
+        if not "force" in params:
             params['force'] = 'false'
 
         if self.__verify_feed_name(feed) == False:
