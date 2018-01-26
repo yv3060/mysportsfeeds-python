@@ -14,7 +14,7 @@ class API_v1_0(object):
 
     # Constructor
     def __init__(self, verbose, store_type=None, store_location=None):
-        self.base_url = "https://www.mysportsfeeds.com/api/feed/pull"
+        self.base_url = "https://api.mysportsfeeds.com/v1.0/pull"
         self.headers = {
             'Accept-Encoding': 'gzip',
             'User-Agent': 'MySportsFeeds Python/{} ({})'.format(ohmysportsfeedspy.__version__, platform.platform())
@@ -25,25 +25,26 @@ class API_v1_0(object):
         self.store_location = store_location
 
         self.valid_feeds = [
-            'current_season',
             'cumulative_player_stats',
             'full_game_schedule',
             'daily_game_schedule',
             'daily_player_stats',
-            'game_playbyplay',
             'game_boxscore',
             'scoreboard',
-            'overall_team_standings',
-            'conference_team_standings',
-            'division_team_standings',
+            'game_playbyplay',
             'player_gamelogs',
             'team_gamelogs',
             'roster_players',
             'game_startinglineup',
             'active_players',
+            'overall_team_standings',
+            'conference_team_standings',
+            'division_team_standings',
+            'playoff_team_standings',
             'player_injuries',
-            'latest_updates',
-            'daily_dfs'
+            'daily_dfs',
+            'current_season',
+            'latest_updates'
         ]
 
     # Verify a feed

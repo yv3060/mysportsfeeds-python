@@ -13,12 +13,14 @@
 #Output = Data_query.msf_get_data(league='nba',season='2016-2017-regular',feed='player_gamelogs',format='json',player='stephen-curry')
 
 from ohmysportsfeedspy.v1_0 import API_v1_0
+from ohmysportsfeedspy.v1_1 import API_v1_1
+from ohmysportsfeedspy.v1_2 import API_v1_2
 
 ### Main class for all interaction with the MySportsFeeds API
 class MySportsFeeds(object):
 
     # Constructor
-    def __init__(self, version='1.0', verbose=False, store_type='file', store_location='results/'):
+    def __init__(self, version='1.2', verbose=False, store_type='file', store_location='results/'):
         self.__verify_version(version)
         self.__verify_store(store_type, store_location)
 
@@ -31,9 +33,15 @@ class MySportsFeeds(object):
         if self.version == '1.0':
             self.api_instance = API_v1_0(self.verbose, self.store_type, self.store_location)
 
+        if self.version == '1.1':
+            self.api_instance = API_v1_1(self.verbose, self.store_type, self.store_location)
+
+        if self.version == '1.2':
+            self.api_instance = API_v1_2(self.verbose, self.store_type, self.store_location)
+
     # Make sure the version is supported
     def __verify_version(self, version):
-        if version != '1.0':
+        if version != '1.0' and version != '1.1' and version != '1.2':
             raise ValueError("Unrecognized version specified.  Supported versions are: '1.0'")
 
     # Verify the type and location of the stored data
