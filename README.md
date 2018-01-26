@@ -27,9 +27,9 @@ Create main MySportsFeeds object with API version as input parameter
 
     from ohmysportsfeedspy import MySportsFeeds
 
-    msf = MySportsFeeds(version="1.0")
+    msf = MySportsFeeds(version="1.2")
 
-Authenticate (v1.0 uses your MySportsFeeds account credentials)
+Authenticate (v1.x uses your MySportsFeeds account credentials)
 
     msf.authenticate("YOUR_USERNAME", "YOUR_PASSWORD")
 
