@@ -6,7 +6,7 @@ Makes use of the [MySportsFeeds API](https://www.mysportsfeeds.com) - a flexible
 
 Free for Non-Commercial Use.
 
-##Install
+## Install
 
 Clone repo, install requirements and run tests
     
@@ -21,7 +21,7 @@ Use PIP install
 
 If you haven't signed up for API access, do so here [https://www.mysportsfeeds.com/index.php/register/](https://www.mysportsfeeds.com/index.php/register/)
 
-##Usage
+## Usage
 
 Create main MySportsFeeds object with API version as input parameter
 
